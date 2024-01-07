@@ -1,4 +1,5 @@
 <script setup>
+	console.log(transition);
 
 	definePageMeta(transition)
 
@@ -24,15 +25,14 @@
 		>
 
 			<div class="page-content">
-				<div
-					v-for="_ in 2"
-					class="page-content__block"
-				>
-					<div class="page-content__block-photo">
-						<img src="/photo.jpeg" alt="">
-					</div>
+				<div class="page-content__block">
+					<!-- <div class="page-content__block-photo">
+						<img src="/photo.jpeg">
+					</div> -->
 					<div class="page-content__block-text p1">
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo aspernatur, eos iste dolorum deserunt distinctio ad quam maxime fugiat consequuntur debitis temporibus veritatis. Laboriosam libero eveniet voluptates. Facilis, dolore natus.
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/TJJNyw1U8V4?si=dRZ22Ib0O0OYekUE" title="YouTube video player"
+							frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+							picture-in-picture; web-share" allowfullscreen></iframe>
 					</div>
 				</div>
 

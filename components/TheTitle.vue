@@ -9,7 +9,11 @@
 
 	<div class="title-default h1">
 		<div class="title-default__wrap">
+			<img v-if="general.pageBg === 'page_black'" src="/logo_branca.png" alt="Kirin" />
+			<img v-else src="/logo_preta.png" alt="Kirin" />
+
 			{{ text }}
+			<small>Kirin</small>
 		</div>
 	</div>
 
@@ -25,6 +29,17 @@
 }
 .title-default__wrap {
 	will-change: transform;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.title-default__wrap img {
+	max-height: 50vh;
 }
 
+.title-default__wrap small {
+	font-size: 1.5rem;
+	float: right;
+}
 </style>

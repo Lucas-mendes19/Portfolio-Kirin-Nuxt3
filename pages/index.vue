@@ -9,7 +9,7 @@
 		<NuxtLayout
 			name="custom"
 			page-name="index"
-			title="Welcome"
+			title="Pedro Henrique"
 		/>
 	</div>
 

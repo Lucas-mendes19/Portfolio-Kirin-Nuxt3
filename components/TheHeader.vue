@@ -1,9 +1,9 @@
 <script setup>
 
 	const links = [
-		{href: '/', text: 'MAIN'},
-		{href: '/about', text: 'ABOUT'},
-		{href: '/gallery', text: 'GALLERY'},
+		{href: '/', text: 'PRINCIPAL'},
+		{href: '/about', text: 'SOBRE'},
+		{href: '/gallery', text: 'GALERIA'},
 	]
 
 </script>

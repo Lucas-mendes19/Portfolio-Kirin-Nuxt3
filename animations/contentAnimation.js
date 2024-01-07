@@ -4,7 +4,12 @@ export function contentAnimation({ type, element }) {
 	elements.forEach((el) => {
 		ScrollTrigger.create({
 			trigger: el,
-			animation: type === "text" ? useAnimateText(el) : useAnimateImage(el)
+			animation: type === "text" ? useAnimateText(el) : useAnimateImage(el),
+			scrub: true,
+			// start: "top center",
+			// pin: true,
+			end: "+=500",
+			// markers: true,
 		})
 	})
 }
