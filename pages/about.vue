@@ -42,6 +42,8 @@ watch(() =>
 <style lang='scss' scoped>
 .page-content {
 	padding-bottom: 25vh;
+	width: auto;
+	max-width: 600px;
 }
 
 .page-content__block {

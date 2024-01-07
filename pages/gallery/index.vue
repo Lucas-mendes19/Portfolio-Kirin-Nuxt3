@@ -6,7 +6,7 @@ watch(() =>
 	([transitionFinish, preloaderVisibility]) => {
 		console.log(general.pageBg);
 		if (transitionFinish && !preloaderVisibility) {
-			contentAnimation({ type: 'text', element: '.test h2' })
+			contentAnimation({ type: 'text', element: '.container h2' })
 
 			testAnimation()
 		}
@@ -17,7 +17,7 @@ watch(() =>
 	<div :class="general.pageBg">
 		<NuxtLayout name="custom" page-name="galeria" title="galeria">
 
-			<div class="test">
+			<div class="container">
 				<h2 :class="general.pageBg">Videos</h2>
 
 				<div class="gallery">
@@ -63,19 +63,17 @@ watch(() =>
 	width: 70%;
 }
 
-.test {
-	padding: 0em 2em;
+.container {
 	text-align: center;
 	line-height: 10vh;
 }
 
-.test h2 {
+.container h2 {
 	font-size: 1.8em;
-	// transform: scale(0);
 	padding: 2em 0em;
 }
 
-.test {
+.container {
 	position: relative;
 	width: 100%;
 	height: 100vh;
@@ -123,6 +121,23 @@ watch(() =>
 	height: 15rem;
 	border-radius: 1.3rem;
 }
+
+@media screen and (max-width: 768px) {
+	.cards {
+		max-width: 15rem
+	}
+
+	.cards li {
+		width: auto;
+		height: auto;
+	}
+
+	.cards li img {
+		width: auto;
+		height: auto;
+		border-radius: 1.3rem;
+	}
+}	
 
 .drag-proxy {
 	visibility: hidden;
