@@ -9,8 +9,8 @@
 
 	<div class="title-default h1">
 		<div class="title-default__wrap">
-			<img v-if="general.pageBg === 'page_black'" src="/logo_branca.png" alt="Kirin" />
-			<img v-else src="/logo_preta.png" alt="Kirin" />
+			<img v-if="general.pageBg === 'page_black'" src="/logo_branca.svg" alt="Kirin" />
+			<img v-else src="/logo_preta.svg" alt="Kirin" />
 
 			{{ text }}
 			
@@ -43,5 +43,6 @@
 .title-default__wrap small {
 	font-size: 1.5rem;
 	float: right;
+	padding-bottom: 1rem;
 }
 </style>

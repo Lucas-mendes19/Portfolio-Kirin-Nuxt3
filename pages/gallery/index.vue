@@ -4,11 +4,11 @@ definePageMeta(transition)
 watch(() =>
 	[general.isTransitionFinish, general.isPreloaderVisible],
 	([transitionFinish, preloaderVisibility]) => {
-		console.log(general.pageBg);
 		if (transitionFinish && !preloaderVisibility) {
-			contentAnimation({ type: 'text', element: '.container h2' })
+			contentAnimation({ type: 'text', element: '.gallery h2' })
+			contentAnimation({ type: 'text', element: '.cards' })
 
-			testAnimation()
+			carouselAnimation()
 		}
 	})
 
@@ -17,39 +17,54 @@ watch(() =>
 	<div :class="general.pageBg">
 		<NuxtLayout name="custom" page-name="galeria" title="galeria">
 
-			<div class="container">
+			<div class="gallery">
 				<h2 :class="general.pageBg">Videos</h2>
-
-				<div class="gallery">
-					<ul class="cards">
-						<li class="hover-image">
+				
+				<ul class="cards">
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/1`">
 							<img src="/thumbnails/alura.png">
-						</li>
-						<li class="hover-image">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/2`">
 							<img src="/thumbnails/sonhos_e_ambicoes.jpeg">
-						</li>
-						<li class="hover-image">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/3`">
 							<img src="/thumbnails/Pokemon_tipo_eletrico.jpg">
-						</li>
-						<li class="hover-image">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/4`">
 							<img src="/thumbnails/tempo.png">
-						</li>
-						<li class="hover-image">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/5`">
 							<img src="/thumbnails/pokemon_tipo_fantasma.jpg">
-						</li>
-						<li class="hover-image">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/6`">
 							<img src="/thumbnails/mine_dos_crias.jpg">
-						</li>
-						<li class="hover-image">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/7`">
 							<img src="/thumbnails/pokemon_tipo_rocha.jpg">
-						</li>
-						<li class="hover-image">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/8`">
 							<img src="/thumbnails/bioshock_inf.jpg">
-						</li>
-					</ul>
-				</div>
-				<div class="drag-proxy"></div>
+						</nuxt-link>
+					</li>
+				</ul>
 			</div>
+			<div class="drag-proxy"></div>
+			
 		</NuxtLayout>
 	</div>
 </template>
@@ -63,28 +78,18 @@ watch(() =>
 	width: 70%;
 }
 
-.container {
-	text-align: center;
-	line-height: 10vh;
-}
-
-.container h2 {
-	font-size: 1.8em;
-	padding: 2em 0em;
-}
-
-.container {
+.gallery {
 	position: relative;
 	width: 100%;
 	height: 100vh;
 	overflow: hidden;
+	text-align: center;
+	line-height: 10vh;
 }
 
-.gallery {
-	position: absolute;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
+.gallery h2 {
+	font-size: 1.8em;
+	padding: 2em 0em;
 }
 
 .cards {
@@ -109,7 +114,6 @@ watch(() =>
 	line-height: 18rem;
 	font-size: 2rem;
 	font-family: sans-serif;
-	// background-color: rgba(212, 0, 0, 0.833);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -120,6 +124,11 @@ watch(() =>
 	width: auto;
 	height: 15rem;
 	border-radius: 1.3rem;
+}
+
+.drag-proxy {
+	visibility: hidden;
+	position: absolute;
 }
 
 @media screen and (max-width: 768px) {
@@ -138,9 +147,4 @@ watch(() =>
 		border-radius: 1.3rem;
 	}
 }	
-
-.drag-proxy {
-	visibility: hidden;
-	position: absolute;
-}
 </style>

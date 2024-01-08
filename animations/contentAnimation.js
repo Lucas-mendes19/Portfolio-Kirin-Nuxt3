@@ -8,7 +8,7 @@ export function contentAnimation({ type, element }) {
 			scrub: true,
 			// start: "top center",
 			// pin: true,
-			end: "+=400",
+			end: "+=350",
 			// markers: true,
 		})
 	})
