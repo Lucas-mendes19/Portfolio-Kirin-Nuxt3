@@ -83,7 +83,7 @@ export function carouselAnimation() {
             this.startOffset = scrub.vars.offset;
         },
         onDrag() {
-            scrub.vars.offset = this.startOffset + (this.startX - this.x) * 0.0003;
+            scrub.vars.offset = this.startOffset + (this.startX - this.x) * 0.0005;
             scrub.invalidate().restart(); // same thing as we do in the ScrollTrigger's onUpdate
         }
     });

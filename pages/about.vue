@@ -19,7 +19,7 @@ watch(() =>
 
 			<div class="page-content">
 				<div class="page-content__block p1">
-					Olá eu sou o Pedro, <strong>(comumente chamado de Kirin na internet)</strong>
+					Olá eu sou o Pedro Henrique, <strong>(comumente chamado de Kirin na internet)</strong>
 				</div>
 				<div class="page-content__block p1">
 					Minha história com edição de vídeo é antiga, mas com um grande hiato no meio, comecei em 2015 editando
@@ -29,7 +29,8 @@ watch(() =>
 					ficando com essa função, me descobri um apaixonado por essa área, desde o roteiro, mixagem de som,
 					edição de vídeo, colorgrading e motion desing. Desde então comecei a consumir muito conteúdo tanto no
 					próprio YouTube como em cursos na Alura para aprender mais sobre edição de vídeo, e recentemente comecei
-					a cursar Cinema, também com o intuito de melhorar mais e mais como video maker. </div>
+					a cursar Cinema, também com o intuito de melhorar mais e mais como video maker.
+				</div>
 
 				<div class="page-content__block p1">
 					Esse é meu portifolio, se tiver interesse em meus serviços, basta me contactar nos contatos a baixo:
