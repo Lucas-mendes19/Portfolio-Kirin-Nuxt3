@@ -76,9 +76,6 @@ export function carouselAnimation() {
     Draggable.create(".drag-proxy", {
         type: "x",
         trigger: ".cards",
-        onClick() {
-            console.log("clicked");
-        },
         onPress() {
             this.startOffset = scrub.vars.offset;
         },

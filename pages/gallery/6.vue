@@ -1,6 +1,4 @@
 <script setup>
-	console.log(transition);
-
 	definePageMeta(transition)
 
 	watch(() =>
