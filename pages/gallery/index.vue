@@ -5,10 +5,20 @@ watch(() =>
 	[general.isTransitionFinish, general.isPreloaderVisible],
 	([transitionFinish, preloaderVisibility]) => {
 		if (transitionFinish && !preloaderVisibility) {
-			contentAnimation({ type: 'text', element: '.gallery h2' })
-			contentAnimation({ type: 'text', element: '.cards' })
+			contentAnimation({ type: 'text', element: '.g-youtube h2' })
+			contentAnimation({ type: 'text', element: '.c-youtube' })
 
-			carouselAnimation()
+			carouselAnimation({ elementTag: '.c-youtube', elementDrag: '.d-youtube' })
+
+			contentAnimation({ type: 'text', element: '.g-effecs h2' })
+			contentAnimation({ type: 'text', element: '.c-effecs' })
+
+			carouselAnimation({ elementTag: '.c-effecs', elementDrag: '.d-effecs' })
+
+			contentAnimation({ type: 'text', element: '.g-short h2' })
+			contentAnimation({ type: 'text', element: '.c-short' })
+
+			carouselAnimation({ elementTag: '.c-short', elementDrag: '.d-short' })
 		}
 	})
 
@@ -17,53 +27,149 @@ watch(() =>
 	<div :class="general.pageBg">
 		<NuxtLayout name="custom" page-name="galeria" title="galeria">
 
-			<div class="gallery">
-				<h2 :class="general.pageBg">Videos</h2>
+			<div class="g-youtube gallery">
+				<h2 :class="general.pageBg">Videos Youtube</h2>
 				
-				<ul class="cards">
+				<ul class="c-youtube cards">
 					<li class="hover-image">
-						<nuxt-link :to="`/gallery/1`">
+						<nuxt-link :to="`/gallery/videos/1`">
 							<img src="/thumbnails/alura.png">
 						</nuxt-link>
 					</li>
 					<li class="hover-image">
-						<nuxt-link :to="`/gallery/2`">
+						<nuxt-link :to="`/gallery/videos/2`">
 							<img src="/thumbnails/sonhos_e_ambicoes.jpeg">
 						</nuxt-link>
 					</li>
 					<li class="hover-image">
-						<nuxt-link :to="`/gallery/3`">
+						<nuxt-link :to="`/gallery/videos/3`">
 							<img src="/thumbnails/Pokemon_tipo_eletrico.jpg">
 						</nuxt-link>
 					</li>
 					<li class="hover-image">
-						<nuxt-link :to="`/gallery/4`">
+						<nuxt-link :to="`/gallery/videos/4`">
 							<img src="/thumbnails/tempo.png">
 						</nuxt-link>
 					</li>
 					<li class="hover-image">
-						<nuxt-link :to="`/gallery/5`">
+						<nuxt-link :to="`/gallery/videos/5`">
 							<img src="/thumbnails/pokemon_tipo_fantasma.jpg">
 						</nuxt-link>
 					</li>
 					<li class="hover-image">
-						<nuxt-link :to="`/gallery/6`">
+						<nuxt-link :to="`/gallery/videos/6`">
 							<img src="/thumbnails/mine_dos_crias.jpg">
 						</nuxt-link>
 					</li>
 					<li class="hover-image">
-						<nuxt-link :to="`/gallery/7`">
+						<nuxt-link :to="`/gallery/videos/7`">
 							<img src="/thumbnails/pokemon_tipo_rocha.jpg">
 						</nuxt-link>
 					</li>
 					<li class="hover-image">
-						<nuxt-link :to="`/gallery/8`">
+						<nuxt-link :to="`/gallery/videos/8`">
 							<img src="/thumbnails/bioshock_inf.jpg">
 						</nuxt-link>
 					</li>
 				</ul>
 			</div>
-			<div class="drag-proxy"></div>
+			<div class="d-youtube drag-proxy"></div>
+
+			<div class="g-effecs gallery">
+				<h2 :class="general.pageBg">Videos Animações</h2>
+				
+				<ul class="c-effecs cards">
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/videos/1`">
+							<img src="/thumbnails/alura.png">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/videos/2`">
+							<img src="/thumbnails/sonhos_e_ambicoes.jpeg">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/videos/3`">
+							<img src="/thumbnails/Pokemon_tipo_eletrico.jpg">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/videos/4`">
+							<img src="/thumbnails/tempo.png">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/videos/5`">
+							<img src="/thumbnails/pokemon_tipo_fantasma.jpg">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/videos/6`">
+							<img src="/thumbnails/mine_dos_crias.jpg">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/videos/7`">
+							<img src="/thumbnails/pokemon_tipo_rocha.jpg">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/videos/8`">
+							<img src="/thumbnails/bioshock_inf.jpg">
+						</nuxt-link>
+					</li>
+				</ul>
+			</div>
+			<div class="d-effecs drag-proxy"></div>
+
+			<div class="g-short gallery">
+				<h2 :class="general.pageBg">Videos Curtos</h2>
+				
+				<ul class="c-short cards">
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/videos/1`">
+							<img src="/thumbnails/alura.png">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/videos/2`">
+							<img src="/thumbnails/sonhos_e_ambicoes.jpeg">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/videos/3`">
+							<img src="/thumbnails/Pokemon_tipo_eletrico.jpg">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/videos/4`">
+							<img src="/thumbnails/tempo.png">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/videos/5`">
+							<img src="/thumbnails/pokemon_tipo_fantasma.jpg">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/videos/6`">
+							<img src="/thumbnails/mine_dos_crias.jpg">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/videos/7`">
+							<img src="/thumbnails/pokemon_tipo_rocha.jpg">
+						</nuxt-link>
+					</li>
+					<li class="hover-image">
+						<nuxt-link :to="`/gallery/videos/8`">
+							<img src="/thumbnails/bioshock_inf.jpg">
+						</nuxt-link>
+					</li>
+				</ul>
+			</div>
+			<div class="d-short drag-proxy"></div>
 			
 		</NuxtLayout>
 	</div>
@@ -81,7 +187,7 @@ watch(() =>
 .gallery {
 	position: relative;
 	width: 100%;
-	height: 100vh;
+	height: 60vh;
 	overflow: hidden;
 	text-align: center;
 	line-height: 10vh;
@@ -96,7 +202,7 @@ watch(() =>
 	position: absolute;
 	width: 34rem;
 	height: 18rem;
-	top: 40%;
+	top: 60%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }

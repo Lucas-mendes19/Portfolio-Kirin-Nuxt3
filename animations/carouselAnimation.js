@@ -1,10 +1,10 @@
-export function carouselAnimation() {    
+export function carouselAnimation({ elementTag, elementDrag }) {    
     // set initial state of items
-    gsap.set('.cards li', {xPercent: 400, opacity: 0, scale: 0});
+    gsap.set(elementTag + ' li', {xPercent: 400, opacity: 0, scale: 0});
     
     const spacing = 0.1;
 
-    const cards = gsap.utils.toArray('.cards li');
+    const cards = gsap.utils.toArray(elementTag + ' li');
 
     // this function will get called for each element in the buildSeamlessLoop() function, and we just need to return an animation that'll get inserted into a master timeline, spaced
     const animateFunc = element => {
@@ -73,9 +73,9 @@ export function carouselAnimation() {
     }
     
     // below is the dragging functionality (mobile-friendly too)...
-    Draggable.create(".drag-proxy", {
+    Draggable.create(elementDrag, {
         type: "x",
-        trigger: ".cards",
+        trigger: elementTag,
         onPress() {
             this.startOffset = scrub.vars.offset;
         },
